@@ -1,0 +1,21 @@
+﻿@model ToDoAppLatest.Models.ViewModel.Users
+<form method="post" >
+    <div class="row">
+        <div class="col-3"> <label>User Name</label></div>
+        <div class="col-3"><input asp-for="User_Name" /></div>
+        <span asp-validation-for=”@Model.User_Name” class=”text-danger”></span>
+    </div>
+    <div class="row">
+        <div class="col-3"> <label>Password</label></div>
+        <div class="col-3"><input type="password" asp-for="Password" /></div>
+        <span asp-validation-for=”@Model.Password” class=”text-danger”></span>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <a asp-action="UserRegister">SignUp</a><br />
+        </div>
+        <div class="col-3">
+            <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+            </div>
+ </form>
